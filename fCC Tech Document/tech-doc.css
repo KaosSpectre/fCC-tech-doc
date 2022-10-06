@@ -1,0 +1,103 @@
+html:not(div.example) {
+	background-color: #0a0a23;
+	color: bisque;
+	line-height: 1.5rem;
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
+	scroll-behavior: smooth;
+}
+#navbar {
+	position: fixed;
+	min-width: 200px;
+	top: 0px;
+	left: 0px;
+	width: 240px;
+	height: 100%;
+	border-right: solid;
+	border-color: bisque;
+}
+#main-doc {
+	position: absolute;
+	margin-left: 230px;
+	padding: 15px;
+	margin-bottom: 110px;
+}
+h1 {
+	display: flex;
+	overflow: visible;
+	line-height: 80%;
+}
+div:not(div.example) {
+	display: flex;
+	width: 75%;
+	height: 100px;
+	background-color: black;
+	line-height: 100px;
+	justify-content: center;
+}
+.inline {
+	background-color: red;
+}
+.word {
+	background-color: bisque;
+	color: black;
+	font-size: 1.1rem;
+}
+.nav-link {
+	text-decoration: none;
+	font-size: 1.5rem;
+}
+a {
+	color: bisque;
+}
+a:visited {
+	color: blueviolet;
+}
+a:hover {
+	color: blue;
+}
+
+a:active {
+	color: red;
+}
+
+ul {
+	list-style: none;
+	margin-left: -15%;
+}
+ul .margin {
+	margin-left: 38px;
+}
+ol {
+	line-height: 2rem;
+}
+header {
+	font-size: 2rem;
+	font-weight: bold;
+}
+.highlight {
+	display: flex;
+	background-color: bisque;
+	color: black;
+	margin-top: 15px;
+	max-width: 75%;
+	justify-content: center;
+}
+strong {
+	font-size: 1.2rem;
+}
+@media (min-width: 400px) and (max-width: 600px) {
+	html {
+		min-width: 400px;
+		max-width: 600px;
+	}
+}
+hr {
+	border: 5px solid cyan;
+	padding: 5px;
+	margin-bottom: 25px;
+	background-color: black;
+}
+.footer {
+	text-align: center;
+}

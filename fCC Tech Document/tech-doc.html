@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles.css" />
+		<title>HTML Basics</title>
+	</head>
+	<body>
+		<nav id="navbar">
+			<header><h1>HTML Basics</h1></header>
+			<ul>
+				<li><a class="nav-link" href="#Introduction">Introduction</a></li>
+				<li><a class="nav-link" href="#Basics">Basics</a></li>
+				<li>
+					<a class="nav-link" href="#Nesting,_Classes,_and_ID's"
+						>Nesting, Classes, and Id's</a
+					>
+				</li>
+				<li>
+					<a class="nav-link" href="#Block_and_Inline_Elements"
+						>Block and Inline Elements</a
+					>
+				</li>
+				<li><a class="nav-link" href="#CSS">CSS</a></li>
+			</ul>
+		</nav>
+		<main id="main-doc">
+			<section class="main-section" id="Introduction">
+				<header><h2>Introduction</h2></header>
+				<article>
+					<h1>What is HTML?</h1>
+					<p>
+						HTML, or Hypertext Markup Language, is used to tell browsers how to
+						render the information in websites that a user visits. For Example:
+					</p>
+					<code class="highlight">&lt;h1&gt;Hello World&lt;/h1&gt;</code>
+					<p>
+						The above example is raw code and not what a user should see. The
+						user will see, when properly rendered, the following:
+					</p>
+					<code class="highlight"><h1>Hello World</h1></code>
+					<p>
+						In the above example the code was rendered correctly. Note how the
+						font is larger and bolded. This comes from the tag itself telling
+						the browser how to behave.
+					</p>
+				</article>
+			</section>
+			<hr />
+			<section class="main-section" id="Basics">
+				<header>Basics</header>
+				<article>
+					<code class="highlight"
+						>&lt;span&gt;I am an example of a typical
+						&lt;strong&gt;HTML&lt;/strong&gt; element&lt;/span&gt;</code
+					>
+					<p>These are the standard parts of an HTML element.</p>
+					<ol>
+						<li>
+							<strong>Opening Tag</strong> - The name of the element enclosed in
+							angled brackets. This tells the browser where the element begins
+							or where to start an affect, such as the &lt;strong&gt; element
+							changing text to be bold.
+						</li>
+						<li>
+							<strong>Content</strong> - The meat and potatoes. This is the
+							actual information that is presented to the user, such as the text
+							you are reading right now. However, content is not limited to just
+							text. It can be an image or video, or even a game.
+						</li>
+						<li>
+							<strong>Closing Tag</strong> - This is the tag at the end of the
+							element. It tells the browser where the element stops or an affect
+							end, such as only the word "HTML" in the above is bold. Without a
+							closing tag, the browser will assume that all that follows that
+							opening tag is part of that element. So watch out for that. Some
+							tags are self-closing, meaning they don't need a closing tag.
+						</li>
+						<li>
+							<strong>Element</strong> - This is what the opening tag, content
+							and closing tag are collectively known as.
+						</li>
+					</ol>
+				</article>
+			</section>
+			<hr />
+			<section class="main-section" id="Nesting,_Classes,_and_ID's">
+				<header>Nesting, Classes, and ID's</header>
+				<article>
+					<p>
+						<strong>Nesting</strong> - The act of adding an element to another
+						element, also used to refer to adding content. All of the element
+						being nested must be inside the opening and closing tags of the
+						parent element. Like so:
+					</p>
+					<code class="highlight"
+						>&lt;div&gt;&lt;span&gt;I am an
+						example&lt;/span&gt;&lt;/div&gt;</code
+					>
+					<p>
+						In the above example, the span element was nested in the div
+						element. In this case the span element is known as the child of the
+						div element, which is the parent element.
+					</p>
+					<p>
+						<strong>Classes</strong> - A class is a name given to an element,
+						usually used to style that element. A class can be given to multiple
+						elements. For example:
+					</p>
+					<ul>
+						<li class="margin">
+							<code class="highlight"
+								>&lt;div class="example"&gt;I am example 1&lt;/div&gt;</code
+							>
+						</li>
+						<li class="margin">
+							<code class="highlight"
+								>&lt;div class="example"&gt;I am example 2&lt;/div&gt;</code
+							>
+						</li>
+						<li class="margin">
+							<code class="highlight"
+								>&lt;div class="example sample"&gt;I am example
+								3&lt;/div&gt;</code
+							>
+						</li>
+					</ul>
+					<p>
+						Classes are denoted with a period at the front. In the above
+						examples, all three elements have the class .example, and only one
+						has the class .sample. So if .example is targeted for styling, all
+						three would have that styling applied. However if .sample is
+						targeted then only example 3 would be affected.
+					</p>
+					<p>
+						<strong>ID's</strong> - An id, written as
+						<code>id="example"</code> is similar to classes. However there are 2
+						main differences. An ID must be unique to a single element, for
+						example, if id="sample" is used for an element then it can't be used
+						again. The second difference is that instead of a period to denote
+						an ID, a pound sign(#) is used.
+					</p>
+				</article>
+			</section>
+			<hr />
+			<section class="main-section" id="Block_and_Inline_Elements">
+				<header>Block and Inline Elements</header>
+				<article>
+					<p>
+						<strong>Block</strong> - Elements in this family are always started
+						on a new line. They take up the full width available, such as the
+						entire parent element in which they are located. Two of the most
+						common block elements are the <code class="word">p</code> and the
+						<code class="word">div</code>
+						elements. As an example:
+					</p>
+					<div>I am a div!</div>
+					<p>
+						<strong>Inline</strong> - Inline elements are elements that do NOT
+						start a new line. They also only take up as much width as necessary
+						in order to hold their content. An inline element can be nested
+						inside a block level element, however an inline element can not hold
+						a block level element. As an example:
+					</p>
+					<code class="highlight"
+						><p>
+							I am before an inline element;
+							<span class="inline">I am an inline element!</span> And I am after
+							the inline element!
+						</p></code
+					>
+					<p>
+						Notice how the inline element, in this case a
+						<code class="word">span</code>, is the only part of the element with
+						a red background. The rest of the element is a
+						<code class="word">p</code> element.
+					</p>
+				</article>
+			</section>
+			<hr />
+			<section class="main-section" id="CSS">
+				<header>CSS</header>
+				<article>
+					<h3>What is CSS?</h3>
+					<p>
+						CSS, or Cascading Style Sheets, is a language used to describe how
+						an HTML element is displayed. It can control multiple web pages at
+						once. It removed the clutter of trying to style HTML from the
+						inside. CSS controls many things in an HTML document, from font
+						size, style and color, to adding animation to elements. The page you
+						are reading right now was extensively styled with CSS.
+					</p>
+					<p><code class="word">p { color: green; }</code></p>
+					<p>
+						The above is a standard example of CSS styling. In this case the
+						styling would change the font color to green in any
+						<code class="word">p</code> element present on the page.
+					</p>
+				</article>
+			</section>
+			<hr />
+			<p class="footer">
+				For more information please visit <br />
+				<a href="https://freecodecamp.org">free Code Camp</a>.
+			</p>
+		</main>
+	</body>
+</html>
